@@ -11,45 +11,49 @@
   <body class="bg-white font-common">
     <!-- header section  -->
     <header class="h-16 flex items-center shadow-sm">
-        <nav class="flex justify-between items-center w-9/12 mx-auto">
-          <div class="text-zinc-800 font-bold uppercase">
-            <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
-            <p class="text-[10px] font-normal capitalize -mt-1">
-              Few questions and Answers!
-            </p>
-          </div>
-          <a
-            href="./index.html" class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
-          >
-            Home
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Few questions and Answers!
+          </p>
+        </div>
+        <a
+          href="./index.html"
+          class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+        >
+          Home
         </a>
-        </nav>
-      </header>
+      </nav>
+    </header>
     <!-- blog question section start -->
     <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto">
-        <h1 class="text-center my-8 text-xl">Welcome to My Blog</h1>
+      <h1 class="text-center my-8 text-xl">Welcome to My Blog</h1>
 
       <div class="mt-6">
         <h2 class="bg-orange-200 px-2 rounded font-semibold">
-          1. What is the difference between map, filter, forEach and find methods?
+          1. What is the difference between map, filter, forEach and find
+          methods?
         </h2>
         <p class="mt-5">
-
-            <span class="font-semibold">map():</span> map function receives a callback
-            function as a parameter and will apply the code on each
-            element and returns a new array. <br /> <br />
-            <span class="font-semibold">filter():</span> filter method receives a callback
-            function as a parameter and it runs the function for each
-            element in the array and return the new array which satisfies
-            the condition applied. <br /> <br />
-            <span class="font-semibold">forEach():</span>forEach function receives a callback
-            function as an argument and it applies the same code to
-            every element and it will not return anything. the return
-            value of forEach function is undefined. <br /> <br />
-            <span class="font-semibold">find():</span>find method receives a callback
-            function as a parameter and it runs the function for each
-            element in the array and return only the first element of
-            the array which satisfy the condition applied.
+          <span class="font-semibold">map():</span> map function receives a
+          callback function as a parameter and will apply the code on each
+          element and returns a new array. <br />
+          <br />
+          <span class="font-semibold">filter():</span> filter method receives a
+          callback function as a parameter and it runs the function for each
+          element in the array and return the new array which satisfies the
+          condition applied. <br />
+          <br />
+          <span class="font-semibold">forEach():</span>forEach function receives
+          a callback function as an argument and it applies the same code to
+          every element and it will not return anything. the return value of
+          forEach function is undefined. <br />
+          <br />
+          <span class="font-semibold">find():</span>find method receives a
+          callback function as a parameter and it runs the function for each
+          element in the array and return only the first element of the array
+          which satisfy the condition applied.
         </p>
       </div>
 
@@ -59,34 +63,55 @@
           cookies?
         </h2>
         <p class="mt-5">
-            There are three mechanism for storing data on the client in javascript, they are-<br>
-            <span>local storage</span>, <br>
-            <span>session storage</span> and<br>
-            <span>cookies</span>. <br>
-            <br />
-            <span class="font-semibold">local storage</span> allows for larger amounts of data to be stored, but the
-            data is not deleted when the browser is closed. Local
-            storage is useful for storing data that the user will need
-            to access later, such as offline data. <br />
-            <br />
-            <span class="font-semibold">session storage</span> is similar to cookies, but
-            the data is only stored for the current session. This means
-            that the data will be deleted when the user closes the
-            browser. Session storage is useful for storing data that is
-            sensitive, such as login credentials. <br />
-            <br />
-            <span class="font-semibold">cookies</span> are the oldest and most well-known
-            mechanism. They are simple to use and well supported by
-            browsers. However, they are limited to 4KB of data and are
-            often used to store data that is not sensitive, such as user
-            preferences.
+          There are three mechanism for storing data on the client in
+          javascript, they are-<br />
+          <span>local storage</span>, <br />
+          <span>session storage</span> and<br />
+          <span>cookies</span>. <br />
+          <br />
+          <span class="font-semibold">local storage</span> allows for larger
+          amounts of data to be stored, but the data is not deleted when the
+          browser is closed. Local storage is useful for storing data that the
+          user will need to access later, such as offline data. <br />
+          <br />
+          <span class="font-semibold">session storage</span> is similar to
+          cookies, but the data is only stored for the current session. This
+          means that the data will be deleted when the user closes the browser.
+          Session storage is useful for storing data that is sensitive, such as
+          login credentials. <br />
+          <br />
+          <span class="font-semibold">cookies</span> are the oldest and most
+          well-known mechanism. They are simple to use and well supported by
+          browsers. However, they are limited to 4KB of data and are often used
+          to store data that is not sensitive, such as user preferences.
         </p>
       </div>
 
       <div class="mt-6">
-        <h2 class="bg-orange-200 px-2 rounded">
-          3. What is event loop and how it work?
+        <h2 class="bg-orange-200 px-2 rounded font-semibold">
+          3. What is event loop and how it works?
         </h2>
+        <p class="mt-5">
+          A mechanism used to manage asynchronous code execution is known as
+          event loop. <br />
+          <br />
+          <span class="font-semibold">working principle:</span>The event loop
+          always checks the call stack and the task queue to ensure that tasks
+          are executed in the correct order. <br />
+          <span class="italic">working steps of event loop- </span>
+          The call stack is a data structure used to keep track of function
+          calls. When a function is called, it is added to the top of the call
+          stack. When a function returns, it is removed from the top of the call
+          stack. When an asynchronous operation(network request, timer) is
+          executed, it is added to the task queue. The event loop continuously
+          checks the call stack and the task queue. If the call stack is empty,
+          it takes the first task from the task queue and adds it to the call
+          stack. When the task is executed, it may queue up additional tasks to
+          be executed later. These tasks are added to the end of the task queue.
+          The event loop repeats this process, continuously checking the call
+          stack and the task queue, and executing tasks as they become
+          available.
+        </p>
       </div>
 
       <div class="mt-6">
