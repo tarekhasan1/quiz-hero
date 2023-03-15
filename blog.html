@@ -116,17 +116,26 @@
           4. What is the purpose of quizTimer function?
         </h2>
         <p class="mt-5">
-          when the quizTimer function is called without passing any truthy
-          value then this function will repeatedly call the setInterval method
-          after one second until quizTimer function is called by passing
-          any truthy value.
+          when the quizTimer function is called without passing any truthy value
+          then this function will repeatedly call the setInterval method after
+          one second until quizTimer function is called by passing any truthy
+          value.
         </p>
       </div>
 
       <div class="mt-6">
-        <h2 class="bg-orange-200 px-2 rounded">
-          5. What is the action of chooseQuiz function?
+        <h2 class="bg-orange-200 px-2 rounded font-semibold">
+          5. What is the purpose of chooseQuiz function?
         </h2>
+        <p class="mt-5 mb-5">
+          The chooseQuiz function receives two arguments as index and givenAns.
+          And when chooseQuiz function is called with two arguments, firstly It will find that any value of quizData array exist or not in
+          answers array, if the index exist then it will replace the existing value of
+          answer array by the new value with new property named givenAns and
+          will break the loop. but if not exist then it will just push the new
+          value with new property named givenAns in answers array. And then will
+          call the displayAnswers function with passed answers array.
+        </p>
       </div>
     </section>
 
