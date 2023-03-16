@@ -109,31 +109,28 @@ document.querySelector("#submit").addEventListener("click", () => {
 
   // data setting on local storage and getting data from local storage
   let storage = JSON.parse(localStorage.getItem("results"));
-  let results = [];
   if (storage) {
-    results = [
-      ...storage,
-      {
-        marks: totalMark,
-        examTime: timeTaken.innerText,
-        status: grade.status,
-      },
-    ];
     localStorage.setItem(
       "results",
-      JSON.stringify(results)
+      JSON.stringify( [
+        ...storage,
+        {
+          marks: totalMark,
+          examTime: timeTaken.innerText,
+          status: grade.status,
+        },
+      ])
     );
   } else {
-    results = [
-      {
-        marks: totalMark,
-        examTime: timeTaken.innerText,
-        status: grade.status,
-      },
-    ];
     localStorage.setItem(
       "results",
-      JSON.stringify(results)
+      JSON.stringify([
+        {
+          marks: totalMark,
+          examTime: timeTaken.innerText,
+          status: grade.status,
+        },
+      ])
     );
   }
 
@@ -157,7 +154,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   
   <button onclick="location.reload();" class="bg-green-600 text-white w-full py-2 rounded mt-16">Restart</button>
   ${
-    results
+    storage
       ? `<div class="mt-5">
       <h1 class="text-center">Previous Submissions <button class="text-blue-800 text-xs" onclick={localStorage.clear();location.reload()}>Clear History</button></h1>
     <div
@@ -166,7 +163,7 @@ document.querySelector("#submit").addEventListener("click", () => {
     <div>Grade</div>
     <div>Time</div>
     </div>
-    ${results
+    ${storage
       ?.reverse()
       ?.map(
         (item) => `<div
